@@ -10,6 +10,7 @@ import UserDetails from "./components/UserDetails";
 import Posts from "./components/Posts";
 import { PostDetails } from "./components/PostDetails";
 import ErrorPage from "./components/ErrorPage";
+import Form from "./components/Form";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         loader: async ({ params }) =>
           fetch(`https://jsonplaceholder.typicode.com/posts/${params.postID}`),
         element: <PostDetails />,
+      },
+      {
+        path: "/form",
+        element: <Form />,
       },
     ],
     errorElement: <ErrorPage />,

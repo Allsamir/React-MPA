@@ -14,6 +14,7 @@ const Sidebar: React.FC = () => {
       }}
     >
       <NavLink to={`/posts`}>Posts</NavLink>
+      <NavLink to={`/form`}>Form</NavLink>
       <NavLink to={`/users`}>Users</NavLink>
       <NavLink to={`/about`}>About</NavLink>
       <NavLink to={`/contact`}>Contact</NavLink>
