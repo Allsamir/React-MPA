@@ -11,6 +11,7 @@ import Posts from "./components/Posts";
 import { PostDetails } from "./components/PostDetails";
 import ErrorPage from "./components/ErrorPage";
 import Form from "./components/Form";
+import UForm from "./components/UForm";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/form",
         element: <Form />,
+      },
+      {
+        path: "/Uform",
+        element: <UForm />,
       },
     ],
     errorElement: <ErrorPage />,

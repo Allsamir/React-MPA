@@ -2,6 +2,8 @@ import React, { ChangeEvent } from "react";
 import { useState } from "react";
 
 const Form: React.FC = () => {
+  // Controlled form
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,12 +44,6 @@ const Form: React.FC = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-      <p>
-        <span style={{ fontWeight: "bold" }}>Name:</span> {formData.name}
-      </p>
-      <p>
-        <span style={{ fontWeight: "bold" }}>Email:</span> {formData.email}
-      </p>
     </>
   );
 };
