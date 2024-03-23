@@ -1,35 +1,20 @@
-import React, { ChangeEvent } from "react";
-import { useState } from "react";
+import React from "react";
+import useInputState from "../hooks/useInputState";
 
 const Form: React.FC = () => {
-  // Controlled form
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  // Controlled form + Custom Hook
+  const nameState = useInputState("");
+  const emailState = useInputState("");
   return (
     <>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(formData);
+          console.log(nameState.value);
+          console.log(emailState.value);
         }}
       >
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleOnChange}
-        />
+        <input type="text" placeholder="Name" name="name" {...nameState} />
         <br />
         <br />
         <input
@@ -37,8 +22,7 @@ const Form: React.FC = () => {
           name="email"
           placeholder="Email"
           id=""
-          onChange={handleOnChange}
-          value={formData.email}
+          {...emailState}
         />
         <br />
         <br />

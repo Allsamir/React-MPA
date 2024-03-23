@@ -20,7 +20,7 @@ const UForm: React.FC = () => {
             emailRef.current?.value,
             h1Ref.current?.innerHTML
           );
-          h1Ref.current ? (h1Ref.current.innerHTML = "Hello Nabila") : null;
+          h1Ref.current ? (h1Ref.current.innerHTML = "Hello Allsamir") : null;
         }}
       >
         <input type="text" ref={nameRef} placeholder="Name" name="name" />
